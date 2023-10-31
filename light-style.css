@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oxygen:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: white;
+    --bgSec: rgb(17, 1, 53);
+    --btn: rgb(200, 168, 255);
+    --btnBg: rgb(181, 163, 255);
+    --neon: rgb(68, 165, 255);
+    --parret: rgb(123, 255, 0);
+    --lowPx: 4px;
+    --medPx: 8px;
+    --highPx: 16px;
+    --exHigh: 32px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--neon);
+    margin: 36px 4vw;
+}
+
+.txt-highlight {
+    color: var(--parret);
+}
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    background-color: var(--bg);
+    color: #333; /* Change text color to a dark color */
+    width: 98vw;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--bgSec);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0px 8vw;
+    position: sticky;
+}
+
+header nav ul {
+    display: flex;
+    justify-self: end;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: #333; /* Change link color to a dark color */
+    text-decoration: none;
+    display: inline-block;
+    margin: 12px;
+    font-size: 17px;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+section {
+    height: 80vh;
+    padding: 0px 4vw;
+}
+
+#about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.name {
+    font-size: 2em;
+}
+
+.btns {
+    margin-top: var(--exHigh);
+}
+
+.btns .btn {
+    padding: var(--medPx) var(--highPx);
+    font-size: 18px;
+    font-weight: 550;
+    background-color: var(--bgSec); /* Change button background color */
+    border-radius: var(--medPx);
+    text-decoration: none;
+    border: 1px solid #333333;
+    color: var(--bg);
+}
+
+.btns .btn:hover {
+    background-color: var(--parret);
+    box-shadow: 0px 3px 8px var(--neon);
+}
+
+#about img {
+    max-width: 30vw;
+    min-width: 20vw;
+    border-radius: 50%;
+    box-shadow: 1px 8px 32px rgba(47, 255, 0, 0.372);
+}
+
+#skills {
+    padding: 0px 4vw;
+}
+
+.tech-stack {
+    text-align: center;
+    margin: var(--medPx) var(--highPx);
+}
+
+.tech-stack img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    padding: var(--highPx);
+}
+
+.projects {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 36px;
+}
+
+.projectCard {
+    width: 423px;
+    background-color: white;
+    height: 329px;
+    display: inline-block;
+    border-radius: 8px;
+    margin: var(--medPx) var(--highPx);
+}
+
+.projectCard > div {
+    margin: var(--highPx) var(--medPx) var(--medPx) var(--medPx);
+    width: 400px;
+    height: 100px;
+    position: relative;
+    display: flex;
+}
+
+.projectCard > img {
+    height: 192px;
+    background-color: var(--bgSec);
+    border-radius: 8px;
+    width: 99%;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+}
+
+.projectCard div img {
+    height: 64px;
+    width: 64px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.projectCard .title {
+    width: 320px;
+    color: var(--bgSec);
+    font-size: 24px;
+    font-weight: 550;
+    display: inline-block;
+    margin-top: var(--highPx);
+    margin-left: var(--medPx);
+}
+
+.center-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.btnGithub {
+    display: none;
+    width: 90%;
+    border-radius: 6px;
+    border: none;
+    padding: 8px var(--exHigh);
+    background-color: var(--btn);
+    color: var(--bgSec);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.projectCard button:hover {
+    background-color: rgba(179, 56, 255, 0.299);
+    border-color: rgba(40, 0, 59, 0.416);
+    cursor: pointer;
+}
+
+#experience {
+}
+
+#contact {
+    height: 200px;
+    position: relative;
+}
+
+#contact h2 {
+    display: inline-block;
+}
+
+#contact h3 {
+    display: inline-block;
+    position: absolute;
+    right: 8vw;
+}
+
+.social-medias {
+    display: flex;
+}
+
+.social-media {
+    display: inline-block;
+}
+
+.social-media img {
+    width: 48px;
+    padding: var(--exHigh);
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.social-media span a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(248, 248, 248);
+}

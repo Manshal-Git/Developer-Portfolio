@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oxygen:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oxygen:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg : rgb(10, 0, 28);
+    --bgSec : rgb(17, 1, 53);
+    --btn : rgb(200, 168, 255);
+    --btnBg : rgb(181, 163, 255);
+    --neon : rgb(68, 165, 255);
+    --parret : rgb(123, 255, 0);
+    --lowPx : 4px;
+    --medPx : 8px;
+    --highPx : 16px;
+    --exHigh : 32px;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: var(--neon);
+    margin: 36px 4vw;
+}
+
+.txt-highlight{
+    color: var(--parret);
+}
+
+
+body{
+    font-family: 'Oxygen', sans-serif;
+    background-color: var(--bg);
+    color: aliceblue;
+    width: 98vw;
+    height: 100vh;
+}
+
+header{
+    background-color:var(--bgSec);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0px 8vw;
+    position: sticky;
+    top: 0;
+}
+
+
+header nav ul {
+    display: flex;
+    justify-self: end;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    display: inline-block;
+    margin: 12px;
+    font-size: 17px;
+}
+
+.clickable:hover{
+        cursor: pointer;
+}
+
+section{
+    height: 80vh;
+    padding: 0px 4vw;
+    display: block;
+}
+#about{
+    display: flex;
+    /* display: none; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.name {
+    font-size: 2em;
+}
+
+.btns {
+    margin-top: var(--exHigh);
+}
+.btns .btn{
+    padding: var(--medPx) var(--highPx);
+    font-size: 18px;
+    font-weight: 550;
+    background-color: aliceblue;
+    border-radius: var(--medPx);
+    text-decoration: none;
+    border: 1px solid #333333;
+    color: var(--bg);
+}
+
+.btns .btn:hover{
+    background-color: var(--parret);
+    box-shadow: 0px 3px 8px var(--neon);
+}
+
+#about img{
+    max-width: 30vw;
+    min-width: 20vw;
+    border-radius: 50%;
+    box-shadow: 1px 8px 32px rgba(47, 255, 0, 0.372);
+}
+
+#skills{
+    /* display: none; */
+    padding: 0px 4vw;
+}
+.tech-stack{
+    text-align: center;
+    margin: var(--medPx) var(--highPx);
+}
+.tech-stack img{
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    padding: var(--highPx);
+}
+@media only screen and (min-width:700px) {
+    .projects{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 36px;
+    }    
+}
+
+@media only screen and (max-width:700px) {
+    .projects{
+        display: flexbox;
+        justify-content: space-evenly;
+        margin-top: 36px;
+        flex-direction: column;
+    }
+}
+.projectCard{
+    width: 423px;
+    background-color: white;
+    height: 329px;
+    display: inline-block;
+    border-radius: 8px;
+    margin: var(--medPx) var(--highPx);
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.projectCard > div{
+    margin: var(--highPx) var(--medPx) var(--medPx) var(--medPx) ;
+    /* background-color: black; */
+    border: 0 solid wheat;
+    border-radius: 8px;
+    width: 400px;
+    height: 100px;
+    position: relative;
+    display: flex;
+}
+
+.projectCard > img{
+    height: 192px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    width: 99%;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+}
+
+.projectCard div img{
+    height: 64px;
+    width: 64px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+
+.projectCard .title{
+    /* background-color: aqua; */
+    width: 320px;
+    color: var(--bgSec);
+    font-size: 24px;
+    font-weight: 550;
+    display: inline-block;
+    margin-top: var(--highPx);
+    margin-left: var(--medPx);
+}
+
+.center-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    /* background-color: rebeccapurple; */
+}
+.btnGithub{
+    display: none;
+    width: 90%;
+    /* box-shadow: 0px 2px 8px var(--btn); */
+    border-radius: 6px;
+    border: none;
+    padding: 8px var(--exHigh);
+    background-color: var(--btn);
+    color: rgb(54, 0, 116);
+    font-weight: 500;
+    font-size: 14px;
+
+}
+.projectView{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.9));
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    border-radius: 8px;
+    border: 0px;
+    transition: transform 0.5s;
+    z-index: 1;
+    text-align: center;
+
+}
+.projectView > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 10%;
+    flex-direction: column;
+    height: 100%;
+}
+
+.projectView > span span{
+    font-size: 18px;
+}
+.projectView > span a img{
+    width: 24px;
+    
+    padding: var(--highPx);
+    margin: var(--medPx);
+}
+.projectCard:hover {
+    transform: scale(1.02);
+}
+.projectCard:hover .projectView{
+    display: block;
+}
+/* .projectCard :hover{
+    background-color: rgba(202, 35, 35, 0.5);
+    border-color: rgba(40, 0, 59, 0.416);
+    cursor: pointer;
+} */
+
+#experience{
+
+}
+
+.workplace{
+    margin-top: var(--exHigh);
+}
+.role {
+    margin-top: var(--exHigh);
+}
+
+.role strong{
+    font-size: 21px;
+}
+.role p:nth-child(2) {
+    color: gainsboro;
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    right: 4vh;
+}
+.role p{ 
+    color: rgba(255, 255, 255, 0.906);
+    margin-left: 100px;
+    font-size: 19px;
+    margin-top: var(--medPx);
+}
+
+#contact{
+    height: 200px;
+    position: relative;
+}
+
+.contactMe{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#contact h2 {
+    display: inline-block;
+    margin-top: var(--exHigh);
+}
+#contact h3 {
+    display: inline-block;
+    position: absolute;
+    right: 8vw;
+}
+#social-media-container{
+    display: inline;
+}
+.social-media{
+    display: inline-block;
+}
+.social-media img{
+    width: 48px;
+    padding: var(--exHigh);
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.social-media span a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(248, 248, 248);
+}
