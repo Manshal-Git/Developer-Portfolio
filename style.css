@@ -39,6 +39,10 @@ body{
     height: 100vh;
 }
 
+main{
+    /* position: relative; */
+}
+
 header{
     background-color:var(--bgSec);
     display: flex;
@@ -53,7 +57,6 @@ header{
 
 header nav ul {
     display: flex;
-    justify-self: end;
     justify-content: space-between;
     list-style: none;
 }
@@ -71,11 +74,13 @@ header nav ul li a{
 }
 
 section{
-    height: 80vh;
+    height: 82vmin;
     padding: 0px 4vw;
-    display: block;
+    /* display: block; */
 }
 #about{
+    /* background-color: aqua; */
+    margin: var(--highPx) 0px;
     display: flex;
     /* display: none; */
     justify-content: space-evenly;
@@ -115,37 +120,61 @@ section{
 #skills{
     /* display: none; */
     padding: 0px 4vw;
+    position: relative;
 }
 .tech-stack{
     text-align: center;
     margin: var(--medPx) var(--highPx);
 }
 .tech-stack img{
-    width: 48px;
-    height: 48px;
+    width: 4vw;
+    height: 4vw;
     object-fit: contain;
     padding: var(--highPx);
 }
-@media only screen and (min-width:700px) {
+ /* desktop */
+@media only screen and (min-width:720px) {
     .projects{
         display: flex;
         justify-content: space-evenly;
         margin-top: 36px;
-    }    
-}
+    }
+    .projectCard{
+        width: 28vw;
+        height: 44vh;
+    }
+    
+}    
 
-@media only screen and (max-width:700px) {
+/* mobile */
+@media only screen and (max-width:720px) {
+    .name {
+        font-size: 1.3em;
+    }
+    section {
+        height: auto;
+    }
+
+    #experience {
+        min-height: 0; /* Remove minimum height */
+    }
+
+    #contact {
+        min-height: 0; /* Remove minimum height */
+    }
     .projects{
-        display: flexbox;
-        justify-content: space-evenly;
+        display: flex;
         margin-top: 36px;
         flex-direction: column;
     }
+    .projectCard{
+        width: 85vw;
+        margin: 4vw;
+    }
+    
 }
 .projectCard{
-    width: 423px;
     background-color: white;
-    height: 329px;
     display: inline-block;
     border-radius: 8px;
     margin: var(--medPx) var(--highPx);
@@ -154,18 +183,21 @@ section{
 }
 
 .projectCard > div{
-    margin: var(--highPx) var(--medPx) var(--medPx) var(--medPx) ;
+    /* margin: var(--highPx) var(--medPx) var(--medPx) var(--medPx) ; */
+    margin: 2% 2.5% 2% 2.5% ;
     /* background-color: black; */
     border: 0 solid wheat;
     border-radius: 8px;
-    width: 400px;
-    height: 100px;
+    width: 95%;
+    height: 30%;
     position: relative;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .projectCard > img{
-    height: 192px;
+    height: 60%;
     background-color: aliceblue;
     border-radius: 8px;
     width: 99%;
@@ -174,23 +206,23 @@ section{
 }
 
 .projectCard div img{
-    height: 64px;
-    width: 64px;
+    /* height: 64px; */
+    width: 18%;
     border-radius: 5px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
+    /* display: inline-block; */
+    /* position: absolute; */
+    /* right: 0; */
 }
 
 .projectCard .title{
     /* background-color: aqua; */
-    width: 320px;
+    width: 75%;
     color: var(--bgSec);
     font-size: 24px;
     font-weight: 550;
-    display: inline-block;
-    margin-top: var(--highPx);
+    /* display: inline-block; */
     margin-left: var(--medPx);
+
 }
 
 .center-container{
@@ -260,7 +292,9 @@ section{
 } */
 
 #experience{
-
+    max-height: 80vh; /* Minimum height to prevent overlap */
+    position: relative;
+    display: block;
 }
 
 .workplace{
@@ -290,6 +324,7 @@ section{
 #contact{
     height: 200px;
     position: relative;
+    /* bottom: 0; */
 }
 
 .contactMe{
