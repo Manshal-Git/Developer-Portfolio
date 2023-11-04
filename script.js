@@ -147,3 +147,27 @@ socialMediaData.forEach(item => {
   // Append the social media div to the container
   container.appendChild(socialMediaDiv);
 });
+
+let navBar = document.getElementById("nav");
+let main = document.getElementById("main");
+let menu = document.getElementById("menuIcon");
+let menuActive = false;
+menu.addEventListener("click", () => {
+  if(menuActive){
+    activate(navBar);
+    // activate(main);
+  }else{
+    deactivate(navBar);
+    // deactivate(main);
+  }
+  menuActive = !menuActive;
+});
+
+function activate(ele){
+  ele.classList.add("hiddenNav");
+    ele.classList.remove("activeNav");
+}
+function deactivate(ele){
+  ele.classList.remove("hiddenNav");
+    ele.classList.add("activeNav");
+}
