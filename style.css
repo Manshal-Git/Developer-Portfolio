@@ -168,7 +168,10 @@ section {
 /* mobile */
 @media only screen and (max-width: 720px) {
 
-    
+    #main{
+        position: relative;
+        top: 10vh;
+    }
     header{
         position: fixed;
     }
