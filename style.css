@@ -124,8 +124,8 @@ section {
 }
 
 .tech-stack img {
-    width: 4vw;
-    height: 4vw;
+    width: 4vmax;
+    height: 4vmax;
     object-fit: contain;
     padding: var(--highPx);
 }
