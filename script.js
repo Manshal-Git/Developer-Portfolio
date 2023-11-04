@@ -152,7 +152,18 @@ let navBar = document.getElementById("nav");
 let main = document.getElementById("main");
 let menu = document.getElementById("menuIcon");
 let menuActive = false;
-menu.addEventListener("click touchstart", () => {
+menu.addEventListener("click", () => {
+  if(menuActive){
+    activate(navBar);
+    // activate(main);
+  }else{
+    deactivate(navBar);
+    // deactivate(main);
+  }
+  menuActive = !menuActive;
+});
+
+menu.addEventListener("touchstart", () => {
   if(menuActive){
     activate(navBar);
     // activate(main);

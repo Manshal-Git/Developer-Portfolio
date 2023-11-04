@@ -127,7 +127,7 @@ section {
     width: 4vmax;
     height: 4vmax;
     object-fit: contain;
-    padding: var(--highPx);
+    padding: 2vmax;
 }
 /* desktop */
 @media only screen and (min-width: 720px) {
