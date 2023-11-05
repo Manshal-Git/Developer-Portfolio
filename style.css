@@ -208,11 +208,19 @@ section {
     }
 
     .name {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 
     section {
         height: auto;
+    }
+
+    #about{
+        padding: 8vh 0px;
+    }
+
+    #about .btns .btn{
+        font-size: 15px;
     }
 
     #experience {
@@ -221,6 +229,10 @@ section {
 
     #contact {
         min-height: 0;
+    }
+
+    #contact h3 {
+        font-size: 16px;
     }
 
     .projects {
@@ -235,11 +247,11 @@ section {
     }
 
     .role strong {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .role p {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 
