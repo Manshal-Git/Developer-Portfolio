@@ -165,6 +165,9 @@ section {
 .hiddedNav {
     transform: translate(-340px);
 }
+/* .passive{
+    margin-left: 170px;
+} */
 /* mobile */
 @media only screen and (max-width: 720px) {
 

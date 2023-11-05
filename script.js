@@ -163,16 +163,26 @@ menu.addEventListener("click", () => {
   menuActive = !menuActive;
 });
 
-menu.addEventListener("touchstart", () => {
-  if(menuActive){
+menu.addEventListener("touchend", () => {
+  if(!menuActive){
     activate(navBar);
-    // activate(main);
+    // activateMain(false);
   }else{
     deactivate(navBar);
     // deactivate(main);
+    // activateMain(true);
   }
   menuActive = !menuActive;
 });
+
+function activateMain(b){
+  // main.classList.toggle("passive",b);
+  if(b){
+    main.classList.remove("passive");
+  }else{
+    main.classList.add("passive");
+  }
+}
 
 function activate(ele){
   ele.classList.add("hiddenNav");
