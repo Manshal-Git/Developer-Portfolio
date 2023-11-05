@@ -168,7 +168,7 @@ function onMenuClicked(){
 function addMenuListeners(){
   deactivate(navBar);
   menu.addEventListener("click", onMenuClicked);
-  menu.addEventListener("touchend", onMenuClicked);
+  menu.addEventListener("touchstart", onMenuClicked);
 }
 
 function activateMain(b){
