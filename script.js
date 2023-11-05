@@ -166,6 +166,7 @@ function onMenuClicked(){
 }
 
 function addMenuListeners(){
+  deactivate(navBar);
   menu.addEventListener("click", onMenuClicked);
   menu.addEventListener("touchend", onMenuClicked);
 }
@@ -179,11 +180,11 @@ function activateMain(b){
   }
 }
 
-function activate(ele){
+function deactivate(ele){
   ele.classList.add("hiddenNav");
     ele.classList.remove("activeNav");
 }
-function deactivate(ele){
+function activate(ele){
   ele.classList.remove("hiddenNav");
     ele.classList.add("activeNav");
 }
