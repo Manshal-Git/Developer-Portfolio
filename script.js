@@ -152,18 +152,8 @@ let navBar = document.getElementById("nav");
 let main = document.getElementById("main");
 let menu = document.getElementById("menuIcon");
 let menuActive = false;
-menu.addEventListener("click", () => {
-  if(menuActive){
-    activate(navBar);
-    // activate(main);
-  }else{
-    deactivate(navBar);
-    // deactivate(main);
-  }
-  menuActive = !menuActive;
-});
 
-menu.addEventListener("touchend", () => {
+function onMenuClicked(){
   if(!menuActive){
     activate(navBar);
     // activateMain(false);
@@ -173,7 +163,12 @@ menu.addEventListener("touchend", () => {
     // activateMain(true);
   }
   menuActive = !menuActive;
-});
+}
+
+function addMenuListeners(){
+  menu.addEventListener("click", onMenuClicked);
+  menu.addEventListener("touchend", onMenuClicked);
+}
 
 function activateMain(b){
   // main.classList.toggle("passive",b);
@@ -192,3 +187,5 @@ function deactivate(ele){
   ele.classList.remove("hiddenNav");
     ele.classList.add("activeNav");
 }
+
+document.addEventListener("DOMContentLoaded", addMenuListeners);

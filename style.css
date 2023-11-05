@@ -177,6 +177,7 @@ section {
     }
     header{
         position: fixed;
+        z-index: 2;
     }
     .horizontalNav nav { 
         background-color: var(--bgSec);
@@ -185,7 +186,6 @@ section {
         top: 10vh;
         transition: transform 0.3s;
         left: -170px;
-        z-index: 2;
     }
     .horizontalNav nav ul li{ 
         padding-left: var(--highPx);
