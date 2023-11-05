@@ -167,12 +167,13 @@ function onMenuClicked(){
 
 function onMenuTouched(){
   onMenuClicked();
+  preventDefault();
   // menu.
 }
 
 function addMenuListeners(){
   deactivate(navBar);
-  menu.addEventListener("click", onMenuClicked);
+  menu.addEventListener("mousedown", onMenuClicked);
   menu.addEventListener("tap", onMenuTouched);
 }
 
