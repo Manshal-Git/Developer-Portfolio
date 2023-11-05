@@ -165,10 +165,15 @@ function onMenuClicked(){
   menuActive = !menuActive;
 }
 
+function onMenuTouched(){
+  onMenuClicked();
+  // menu.
+}
+
 function addMenuListeners(){
   deactivate(navBar);
   menu.addEventListener("click", onMenuClicked);
-  menu.addEventListener("touchstart", onMenuClicked);
+  menu.addEventListener("tap", onMenuTouched);
 }
 
 function activateMain(b){
