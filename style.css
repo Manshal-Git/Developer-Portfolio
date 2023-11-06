@@ -77,7 +77,7 @@ section {
 }
 
 #about {
-    margin: var(--highPx) 0;
+    margin: var(--highPx) 4vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -267,11 +267,17 @@ section {
         font-size: 16px;
     }
 
+    .social-media{
+        width: 64px;
+        height: 64px;
+    }
+    
     .social-media img{
-        width: 36px;
+        width: 32px;
     }
     .social-media span a{
-        font-size: 16px;
+        /* font-size: 16px; */
+        display: none;
     }
     .contactMe h2 {
         font-size: 18px;
