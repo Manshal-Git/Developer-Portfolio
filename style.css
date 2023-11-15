@@ -119,7 +119,7 @@ section {
     padding: 2vmax;
 }
 /* desktop */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 576px) {
     header nav ul li a {
         font-size: 17px;
     }
@@ -163,6 +163,9 @@ section {
     .social-media span a{
         font-size: 20px;
     }
+    .contactMe h2 {
+        font-size: 23px;
+    }
 }
 
 .activeNav {
@@ -175,7 +178,7 @@ section {
     margin-left: 170px;
 } */
 /* mobile */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
 
     #main{
         position: relative;
@@ -280,7 +283,7 @@ section {
         display: none;
     }
     .contactMe h2 {
-        font-size: 18px;
+        font-size: 16px;
         margin-top: var(--highPx);
     }
 }
@@ -406,10 +409,15 @@ section {
     justify-content: space-between;
 }
 
-.role p {
-    color: rgba(255, 255, 255, 0.906);
+.role > p {
+    color: rgba(255, 255, 255, 0.9);
     margin-left: 100px;
     margin-top: var(--medPx);
+}
+
+.head > p {
+    color: rgba(255, 255, 255, 0.650);
+    font-size: 17px;
 }
 
 #contact {
@@ -418,12 +426,15 @@ section {
 }
 
 .contactMe {
+    font-size: 16px;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 6vh;
+    text-align: center;
 }
 
 #contact h2 {
+    
     display: inline-block;
     margin-top: var(--exHigh);
 }

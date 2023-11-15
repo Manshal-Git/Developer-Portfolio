@@ -122,6 +122,32 @@ const socialMediaData = [
 ];
 
 
+// // Loop through the array and create elements for each JSON object
+// socialMediaData.forEach(item => {
+//   // Create a div element for each social media platform
+//   const socialMediaDiv = document.createElement("div");
+//   socialMediaDiv.className = "social-media";
+
+//   // Create an image element
+//   const img = document.createElement("img");
+//   img.src = item.iconSrc;
+//   img.alt = item.platform;
+
+//   // Create a span element containing a link
+//   const span = document.createElement("span");
+//   const link = document.createElement("a");
+//   link.href = item.profileUrl;
+//   link.textContent = item.name;
+//   span.appendChild(link);
+
+//   // Append the image and span to the social media div
+//   socialMediaDiv.appendChild(img);
+//   socialMediaDiv.appendChild(span);
+
+//   // Append the social media div to the container
+//   container.appendChild(socialMediaDiv);
+// });
+
 // Loop through the array and create elements for each JSON object
 socialMediaData.forEach(item => {
   // Create a div element for each social media platform
@@ -132,13 +158,21 @@ socialMediaData.forEach(item => {
   const img = document.createElement("img");
   img.src = item.iconSrc;
   img.alt = item.platform;
+  img.classList.add("clickable");
 
   // Create a span element containing a link
   const span = document.createElement("span");
   const link = document.createElement("a");
   link.href = item.profileUrl;
   link.textContent = item.name;
+  link.target = '_blank';
   span.appendChild(link);
+
+  // Add click event listener to the social media div
+  img.addEventListener("click", function() {
+      // Open the link when the div is clicked
+      window.open(item.profileUrl, '_blank');
+  });
 
   // Append the image and span to the social media div
   socialMediaDiv.appendChild(img);
@@ -147,6 +181,7 @@ socialMediaData.forEach(item => {
   // Append the social media div to the container
   container.appendChild(socialMediaDiv);
 });
+
 
 let navBar = document.getElementById("nav");
 let main = document.getElementById("main");
