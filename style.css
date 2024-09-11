@@ -36,6 +36,10 @@ body {
     height: 100vh;
 }
 
+b {
+    color: green;
+}
+
 header {
     background-color: var(--bgSec);
     height: 10vh;
